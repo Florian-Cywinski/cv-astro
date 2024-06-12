@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>My Cool Resume</title>
+    </head>
+    <!-- <body class="grid min-h-screen place-items-center bg-gray-400"> -->
+    <body
+        class="grid min-h-screen place-items-center bg-gray-400 print:min-h-0"
+    >
+        <!-- <main
+            class="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white p-8 shadow-lg"
+        > -->
+        <main
+            class="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white p-8 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none"
+        >
+            <div class="border-solid border-2 border-indigo-600 p-8">
+                <!-- Put your content here -->
+                <h1>CV</h1>
+                <!-- <Icon pack="logos" name="rust" class="inline h-5 w-5" /> -->
+                <!-- javascript -->
+                <!-- <Icon pack="logos" name="python" class="inline h-5 w-5" /> -->
+                <!-- Python -->
+                <!-- Loads the SVG in `/src/icons/filename.svg` -->
+                <Icon name="javascript" size={100} />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio rem sapiente voluptate esse illo sint a facilis
+                    molestias iure praesentium libero amet doloribus aspernatur
+                    odit cum non, quod tempora eum.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>
