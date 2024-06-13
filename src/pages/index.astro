@@ -38,7 +38,8 @@ import hello from "../assets/img/hello.png";
                 <!-- Flex Container For Nav Items -->
                 <div class="flex items-center w-[80mm] justify-center">
                     <!-- To center the heading-text div -->
-                    <div class="flex flex-col items-left w-[50mm]">
+                    <div class="flex flex-col items-center w-[50mm]">
+                        <!-- <div class="flex flex-col items-left w-[50mm]"></div> -->
                         <!-- To have the text left aligned -->
                         <h1 class="roboto-bold header-font-color text-xl">
                             Max Mustermann
@@ -51,7 +52,9 @@ import hello from "../assets/img/hello.png";
             </header>
             <div class="grid grid-cols-25/75 h-[272mm]">
                 <!-- First Column (20% width) -->
-                <div class="flex justify-center left-panel-bg-color">
+                <div class="flex flex-col items-center left-panel-bg-color">
+                    <!-- Left grid cloumn -->
+                    <!-- Left panel container -->
                     <!-- Content -->
                     <!-- <Icon name="javascript" size={100} /> -->
                     <!-- <img src="../" alt="Profile image" /> -->
@@ -60,6 +63,34 @@ import hello from "../assets/img/hello.png";
                         alt="Profile picture"
                         class="profile-picture"
                     />
+                    <div
+                        class="flex flex-col items-center h-[140mm] left-panel-text-container"
+                    >
+                        <!-- Text container -->
+
+                        <p class="text-xs mt-6">Geburtstag</p>
+                        <p class="text-sm">12.02.1982 in Berlin</p>
+                        <!-- <hr
+                        class="w-40 h-1 mx-auto my-4 bg-gray-200 border-0 rounded"
+                        /> -->
+                        <hr
+                            class="w-40 h-1 mx-auto my-4 horizontal-line-color border-0 rounded"
+                        />
+                        <p class="text-xs">Adresse</p>
+                        <p class="text-sm">Berliner Straße 1</p>
+                        <p class="text-sm">12345 Berlin</p>
+                        <hr
+                            class="w-40 h-1 mx-auto my-4 horizontal-line-color border-0 rounded"
+                        />
+                        <p class="text-xs">Telefon</p>
+                        <p class="text-sm">+49 173 65 65 65 65</p>
+                        <hr
+                            class="w-40 h-1 mx-auto my-4 horizontal-line-color border-0 rounded"
+                        />
+                        <p class="text-xs">E-Mail</p>
+                        <p class="text-sm">max-mustermann@mail.de</p>
+                        <!-- <p class="text-sm">@mail.com</p> -->
+                    </div>
                 </div>
 
                 <!-- Second Column (80% width) -->

@@ -55,6 +55,10 @@ header {
     color: #f1f1f1;
 }
 
+.horizontal-line-color {
+    background: #34404a;
+}
+
 .left-panel-bg-color {
     /* background: #d9e4e9; */
     background: #f1f1f1;
@@ -72,5 +76,12 @@ header {
     /* object-fit: contain; */
     border-radius: 50%;
     position: relative; /* Declared position allows for location changes */
-    top: -70px; /* Moves the image 2px closer to the top of the page */
+    top: -70px; /* Moves the image 70px closer to the top of the page */
+    /* flex-grow: 0; */
+    flex: none;
+}
+
+.left-panel-text-container {
+    position: relative;
+    top: -70px;
 }
