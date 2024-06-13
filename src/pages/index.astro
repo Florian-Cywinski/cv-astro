@@ -1,11 +1,26 @@
 ---
+import "../styles/tailwind.css";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import hello from "../assets/img/hello.png";
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>My Cool Resume</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <!-- <body class="grid min-h-screen place-items-center bg-gray-400"> -->
     <body
@@ -15,23 +30,42 @@ import { Icon } from "astro-icon/components";
             class="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white p-8 shadow-lg"
         > -->
         <main
-            class="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white p-8 shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none"
+            class="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none"
         >
-            <div class="border-solid border-2 border-indigo-600 p-8">
-                <!-- Put your content here -->
-                <h1>CV</h1>
-                <!-- <Icon pack="logos" name="rust" class="inline h-5 w-5" /> -->
-                <!-- javascript -->
-                <!-- <Icon pack="logos" name="python" class="inline h-5 w-5" /> -->
-                <!-- Python -->
-                <!-- Loads the SVG in `/src/icons/filename.svg` -->
-                <Icon name="javascript" size={100} />
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Optio rem sapiente voluptate esse illo sint a facilis
-                    molestias iure praesentium libero amet doloribus aspernatur
-                    odit cum non, quod tempora eum.
-                </p>
+            <header class="flex items-center justify-center h-[25mm] w-[210mm]">
+                <!-- To center the heading div -->
+                <!-- bg-gray-700 -->
+                <!-- Flex Container For Nav Items -->
+                <div class="flex items-center w-[80mm] justify-center">
+                    <!-- To center the heading-text div -->
+                    <div class="flex flex-col items-left w-[50mm]">
+                        <!-- To have the text left aligned -->
+                        <h1 class="roboto-bold header-font-color text-xl">
+                            Max Mustermann
+                        </h1>
+                        <h2 class="roboto-medium header-font-color">
+                            Lebenslauf
+                        </h2>
+                    </div>
+                </div>
+            </header>
+            <div class="grid grid-cols-25/75 h-[272mm]">
+                <!-- First Column (20% width) -->
+                <div class="flex justify-center left-panel-bg-color">
+                    <!-- Content -->
+                    <!-- <Icon name="javascript" size={100} /> -->
+                    <!-- <img src="../" alt="Profile image" /> -->
+                    <Image
+                        src={hello}
+                        alt="Profile picture"
+                        class="profile-picture"
+                    />
+                </div>
+
+                <!-- Second Column (80% width) -->
+                <div class="bg-white">
+                    <!-- Content -->
+                </div>
             </div>
         </main>
     </body>

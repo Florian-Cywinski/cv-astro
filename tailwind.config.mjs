@@ -2,7 +2,12 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			gridTemplateColumns:
+			{
+			  '25/75': '25% 75%',
+			}
+		  },
 	},
 	plugins: [],
 }
