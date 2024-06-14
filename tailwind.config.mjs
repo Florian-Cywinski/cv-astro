@@ -12,6 +12,7 @@ export default {
 				secondary: '#f1f1f1',	// text-secondary
 			  },
 			  fontFamily: { // To add custom fonts 
+				sans: ['Roboto', 'sans-serif'], 	// A Google font - sans is default -> to overwrite sans with Roboto as default font
 				roboto: ['Roboto', 'sans-serif'], 	// A Google font
 				museoModerno: ['MuseoModerno', 'sans-serif'],	// A Google font - <p class="font-museoModerno darkGray">MMMWWWMMM</p>
 			  },
