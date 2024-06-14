@@ -8,7 +8,7 @@ import hello from "../assets/img/hello.png";
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>My Cool Resume</title>
+        <title>My Resume</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -32,7 +32,9 @@ import hello from "../assets/img/hello.png";
         <main
             class="m-4 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white shadow-lg print:m-0 print:h-screen print:w-screen print:rounded-none print:shadow-none"
         >
-            <header class="flex items-center justify-center h-[25mm] w-[210mm]">
+            <header
+                class="flex items-center justify-center h-[25mm] w-[210mm] bg-primary"
+            >
                 <!-- To center the heading div -->
                 <!-- bg-gray-700 -->
                 <!-- Flex Container For Nav Items -->
@@ -41,18 +43,16 @@ import hello from "../assets/img/hello.png";
                     <div class="flex flex-col items-center w-[50mm]">
                         <!-- <div class="flex flex-col items-left w-[50mm]"></div> -->
                         <!-- To have the text left aligned -->
-                        <h1 class="roboto-bold header-font-color text-xl">
+                        <h1 class="roboto-bold text-secondary text-xl">
                             Max Mustermann
                         </h1>
-                        <h2 class="roboto-medium header-font-color">
-                            Lebenslauf
-                        </h2>
+                        <h2 class="roboto-medium text-secondary">Lebenslauf</h2>
                     </div>
                 </div>
             </header>
             <div class="grid grid-cols-25/75 h-[272mm]">
-                <!-- First Column (20% width) -->
-                <div class="flex flex-col items-center left-panel-bg-color">
+                <!-- First Column (25% width) -->
+                <div class="flex flex-col items-center bg-secondary">
                     <!-- Left grid cloumn -->
                     <!-- Left panel container -->
                     <!-- Content -->
@@ -74,18 +74,18 @@ import hello from "../assets/img/hello.png";
                         class="w-40 h-1 mx-auto my-4 bg-gray-200 border-0 rounded"
                         /> -->
                         <hr
-                            class="w-40 h-1 mx-auto my-4 horizontal-line-color border-0 rounded"
+                            class="w-40 h-1 mx-auto my-4 bg-primary border-0 rounded"
                         />
                         <p class="text-xs">Adresse</p>
                         <p class="text-sm">Berliner Straße 1</p>
                         <p class="text-sm">12345 Berlin</p>
                         <hr
-                            class="w-40 h-1 mx-auto my-4 horizontal-line-color border-0 rounded"
+                            class="w-40 h-1 mx-auto my-4 bg-primary border-0 rounded"
                         />
                         <p class="text-xs">Telefon</p>
                         <p class="text-sm">+49 173 65 65 65 65</p>
                         <hr
-                            class="w-40 h-1 mx-auto my-4 horizontal-line-color border-0 rounded"
+                            class="w-40 h-1 mx-auto my-4 bg-primary border-0 rounded"
                         />
                         <p class="text-xs">E-Mail</p>
                         <p class="text-sm">max-mustermann@mail.de</p>
@@ -93,9 +93,28 @@ import hello from "../assets/img/hello.png";
                     </div>
                 </div>
 
-                <!-- Second Column (80% width) -->
+                <!-- Second Column (75% width) -->
                 <div class="bg-white">
+                    <!-- Right grid cloumn -->
                     <!-- Content -->
+                    <!-- <Icon name="work" size={20} class="text-white bg-primary" /> -->
+                    <Icon
+                        name="work-experience"
+                        size={20}
+                        class="text-white bg-primary"
+                    />
+                    <p class="text-base inline-block break-after-column">
+                        Berufserfahrung
+                    </p>
+                    <p class="font-museoModerno text-primary">MMMWWWMMM</p>
+                    <!-- <Icon name="education" size={20} class="text-white bg-primary" /> -->
+                    <!-- <Icon
+                        name="education-notes"
+                        size={20}
+                        class="text-white bg-primary"
+                    /> -->
+                    <!-- <Icon name="cognition" size={20} class="text-white bg-primary" /> -->
+                    <!-- <Icon name="school" size={20} class="text-white bg-primary" /> -->
                 </div>
             </div>
         </main>

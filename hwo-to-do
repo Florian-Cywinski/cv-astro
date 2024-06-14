@@ -10,7 +10,7 @@ https://lebenslaufdesigns.de/
 
 
 
-
+https://www.google.com/imgres?q=bluegray&imgurl=https%3A%2F%2Fimages.appypie.com%2Fwp-content%2Fuploads%2F2023%2F07%2F14145702%2FBlue-Gray-HEX-Codes.jpg&imgrefurl=https%3A%2F%2Fwww.appypie.com%2Fblog%2Fblue-gray-color&docid=lkuNLWjpOEZKyM&tbnid=TDDCc18ZImXyPM&vet=12ahUKEwjL4vb0mtiGAxVz8LsIHYoVBXoQM3oECCkQAA..i&w=1200&h=610&hcb=2&ved=2ahUKEwjL4vb0mtiGAxVz8LsIHYoVBXoQM3oECCkQAA
 
 
 
@@ -28,6 +28,11 @@ https://blog.ronanru.com/resume-html-tailwind-css/      // How I made my resume 
 
 https://icon-sets.iconify.design/logos/
 https://icon-sets.iconify.design/skill-icons/
+https://icon-sets.iconify.design/material-symbols/
+https://icon-sets.iconify.design/material-symbols/school-rounded/
+https://icon-sets.iconify.design/material-symbols/cognition-rounded/
+https://icon-sets.iconify.design/material-symbols/clinical-notes/
+https://icon-sets.iconify.design/material-symbols/card-travel/
 
 npx astro add astro-icon
 npm install --save-dev @iconify/tailwind
