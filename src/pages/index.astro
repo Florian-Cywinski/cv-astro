@@ -3,6 +3,14 @@ import "../styles/tailwind.css";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import hello from "../assets/img/hello.png";
+import { Tooltips } from "astro-tooltips";
+import "tippy.js/dist/tippy.css";
+
+import Tooltip from "../components/Tooltip.astro";
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+// import "/dist/tippy.umd.min.js";
+// import { delegate } from "tippy.js";
 ---
 
 <html lang="en">
@@ -21,6 +29,9 @@ import hello from "../assets/img/hello.png";
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+        <!-- <Tooltips interactive={false} delay={[15, 14000]} /> -->
+        <Tooltips interactive={false} data-tooltip-placement="left" />
+        <Tooltip />
     </head>
     <!-- <body class="grid min-h-screen place-items-center bg-gray-400"> -->
     <body
@@ -122,7 +133,7 @@ import hello from "../assets/img/hello.png";
                         </div>
                     </div>
                     <hr
-                        class="w-120 h-1 mx-auto my-1 bg-primary border-0 rounded"
+                        class="w-120 h-1 mx-auto my-1 bg-secondary border-0 rounded"
                     />
                     <div class="flex items-start">
                         <p class="w-32 text-primary text-xs font-medium">
@@ -138,7 +149,7 @@ import hello from "../assets/img/hello.png";
                         </div>
                     </div>
                     <hr
-                        class="w-120 h-1 mx-auto my-1 bg-primary border-0 rounded"
+                        class="w-120 h-1 mx-auto my-1 bg-secondary border-0 rounded"
                     />
                     <div class="flex items-start">
                         <p class="w-32 text-primary text-xs font-medium">
@@ -190,7 +201,7 @@ import hello from "../assets/img/hello.png";
                         </div>
                     </div>
                     <hr
-                        class="w-120 h-1 mx-auto my-1 bg-primary border-0 rounded"
+                        class="w-120 h-1 mx-auto my-1 bg-secondary border-0 rounded"
                     />
                     <div class="flex items-start">
                         <p class="w-32 text-primary text-xs font-medium">
@@ -212,14 +223,16 @@ import hello from "../assets/img/hello.png";
                         </div>
                     </div>
 
-                    <!-- Kenntnisse -->
+                    <!-- Kenntnisse und Interessen -->
                     <div class="flex items-center mt-8">
                         <Icon
                             name="cognition"
                             size={15}
                             class="text-white bg-primary mr-2"
                         />
-                        <p class="text-primary text-base">Ausbildung</p>
+                        <p class="text-primary text-base">
+                            Kenntnisse und Interessen
+                        </p>
                     </div>
                     <hr
                         class="w-120 h-1 mx-auto my-1 bg-primary border-0 rounded"
@@ -236,18 +249,24 @@ import hello from "../assets/img/hello.png";
                         </div>
                     </div>
                     <hr
-                        class="w-120 h-1 mx-auto my-1 bg-primary border-0 rounded"
+                        class="w-120 h-1 mx-auto my-1 bg-secondary border-0 rounded"
                     />
                     <div class="flex items-start">
                         <p class="w-32 text-primary text-xs font-medium">
                             IT-Kenntnisse
                         </p>
                         <div>
-                            <Icon name="javascript" size={15} />
+                            <Icon
+                                title="JavaScript"
+                                data-tooltip-placement="left"
+                                class="tooltipStyle"
+                                name="javascript"
+                                size={15}
+                            />
                         </div>
                     </div>
                     <hr
-                        class="w-120 h-1 mx-auto my-1 bg-primary border-0 rounded"
+                        class="w-120 h-1 mx-auto my-1 bg-secondary border-0 rounded"
                     />
                     <div class="flex items-start">
                         <p class="w-32 text-primary text-xs font-medium">
@@ -256,7 +275,32 @@ import hello from "../assets/img/hello.png";
                         <p class="text-primary text-sm">Sport und Wandern</p>
                     </div>
                 </div>
+
+                <!-- <span tip="Aw, thanks">Hover me!</span> -->
+                <style type="text/css">
+                    a[title] {
+                        prince-tooltip: attr(title);
+                    }
+                </style>
+                <a title="Tooltip">This works.</a>
             </div>
         </main>
+
+        <!-- Development -->
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"
+        ></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"
+        ></script>
+
+        <!-- Production -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <!-- <script>
+            // With the above scripts loaded, you can call `tippy()` with a CSS
+            // selector and a `content` prop:
+            tippy("#myButton", {
+                content: "My tooltip!",
+            });
+        </script> -->
     </body>
 </html>
