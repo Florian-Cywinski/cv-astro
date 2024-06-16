@@ -4,13 +4,6 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import hello from "../assets/img/hello.png";
 import { Tooltips } from "astro-tooltips";
-import "tippy.js/dist/tippy.css";
-
-import Tooltip from "../components/Tooltip.astro";
-import tippy from "tippy.js";
-import "tippy.js/dist/tippy.css";
-// import "/dist/tippy.umd.min.js";
-// import { delegate } from "tippy.js";
 ---
 
 <html lang="en">
@@ -31,7 +24,6 @@ import "tippy.js/dist/tippy.css";
         />
         <!-- <Tooltips interactive={false} delay={[15, 14000]} /> -->
         <Tooltips interactive={false} data-tooltip-placement="left" />
-        <Tooltip />
     </head>
     <!-- <body class="grid min-h-screen place-items-center bg-gray-400"> -->
     <body
@@ -64,16 +56,16 @@ import "tippy.js/dist/tippy.css";
             <div class="grid grid-cols-25/75 h-[272mm]">
                 <!-- First Column (25% width) - Left panel -->
                 <div class="flex flex-col items-center bg-secondary">
-                    <!-- Left grid cloumn -->
-                    <!-- Left panel container -->
-                    <!-- Content -->
-                    <!-- <Icon name="javascript" size={100} /> -->
-                    <!-- <img src="../" alt="Profile image" /> -->
-                    <Image
-                        src={hello}
-                        alt="Application picture"
-                        class="application-picture"
-                    />
+                    <a
+                        href="https://github.com/Florian-Cywinski"
+                        target="_blank"
+                    >
+                        <Image
+                            src={hello}
+                            alt="Application picture"
+                            class="application-picture"
+                        /></a
+                    >
                     <div
                         class="flex flex-col items-center h-[140mm] left-panel-text-container"
                     >
@@ -95,11 +87,17 @@ import "tippy.js/dist/tippy.css";
                         />
                         <p class="text-xs">Telefon</p>
                         <p class="text-sm">+49 173 65 65 65 65</p>
+                        <!-- <a class="!text-sm" href="tel:+4733378901"
+                            >+47 333 78 901</a
+                        > -->
                         <hr
                             class="w-40 h-1 mx-auto my-4 bg-primary border-0 rounded"
                         />
                         <p class="text-xs">E-Mail</p>
-                        <p class="text-sm">max-mustermann@mail.de</p>
+                        <a class="text-sm" href="mailto:someone@example.com"
+                            >max-mustermann@mail.de</a
+                        >
+                        <!-- <p class="text-sm">max-mustermann@mail.de</p> -->
                         <!-- <p class="text-sm">@mail.com</p> -->
                     </div>
                 </div>
@@ -255,15 +253,31 @@ import "tippy.js/dist/tippy.css";
                         <p class="w-32 text-primary text-xs font-medium">
                             IT-Kenntnisse
                         </p>
-                        <div>
+                        <a
+                            class="mr-2"
+                            href="https://www.javascript.com/"
+                            target="_blank"
+                        >
                             <Icon
                                 title="JavaScript"
-                                data-tooltip-placement="left"
-                                class="tooltipStyle"
                                 name="javascript"
                                 size={15}
                             />
-                        </div>
+                        </a>
+                        <a
+                            class="mr-2"
+                            href="https://react.dev/"
+                            target="_blank"
+                        >
+                            <Icon title="React" name="react" size={15} />
+                        </a>
+                        <a
+                            class="mr-2"
+                            href="https://de.wikipedia.org/wiki/Hypertext_Markup_Language"
+                            target="_blank"
+                        >
+                            <Icon title="HTML5" name="html" size={15} />
+                        </a>
                     </div>
                     <hr
                         class="w-120 h-1 mx-auto my-1 bg-secondary border-0 rounded"
@@ -275,32 +289,7 @@ import "tippy.js/dist/tippy.css";
                         <p class="text-primary text-sm">Sport und Wandern</p>
                     </div>
                 </div>
-
-                <!-- <span tip="Aw, thanks">Hover me!</span> -->
-                <style type="text/css">
-                    a[title] {
-                        prince-tooltip: attr(title);
-                    }
-                </style>
-                <a title="Tooltip">This works.</a>
             </div>
         </main>
-
-        <!-- Development -->
-        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"
-        ></script>
-        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"
-        ></script>
-
-        <!-- Production -->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
-        <!-- <script>
-            // With the above scripts loaded, you can call `tippy()` with a CSS
-            // selector and a `content` prop:
-            tippy("#myButton", {
-                content: "My tooltip!",
-            });
-        </script> -->
     </body>
 </html>

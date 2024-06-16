@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@astrouxds/tailwind": "^0.0.6",
+    "@astrouxds/tokens": "^1.12.0",
+    "@material-tailwind/html": "^2.2.2",
     "astro": "^4.10.2",
     "astro-icon": "^1.1.0",
     "astro-tooltips": "^0.6.2",
